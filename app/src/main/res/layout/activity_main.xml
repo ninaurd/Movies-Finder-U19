@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<!--
+MAIN BUTTONS BLOCK
+temporary background set through tools - just for the preview
+height and width set as 0dp to match constraints
+margins ensure correct spacing on different screens
+-->
+    <LinearLayout
+        android:id="@+id/buttons_area"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="46dp"
+        android:layout_marginVertical="32dp"
+        android:orientation="vertical"
+        tools:background="@color/orange"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar" />
+    <!--
+    TOP BAR FOR THE FUTURE MENU
+    fixed height as per the task
+    color matches exactly the color of the task preview
+    only top constraint needed, as the width matches parent
+    -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/blue"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <!--
+       BOTTOM BAR FOR THE FUTURE NAVIGATION MENU
+       fixed height as per the task
+       color matches exactly the color of the task preview
+       only bottom constraint needed, as the width matches parent
+       -->
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/green"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
